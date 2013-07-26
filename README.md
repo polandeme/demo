@@ -1,4 +1,9 @@
-#demo
-====
+some exercise
+-------------------
 
-my demo 
+write some examples  
+learn some knowledge  
+
+
+> stay hungry stay foolish 
+
