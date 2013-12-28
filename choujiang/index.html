@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src = "../jquery-1.10.2.min.js"> </script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                width: 50%;
+                height: 43px;
+                border: 1px solid gray;
+                overflow: hidden;
+                margin: 5px 5px 5px 5px; 
+                margin: 0 auto;
+                margin-top: 49px;
+            }
+            .ul-box {
+                padding: 11px 10px 10px 10px;
+                text-align: center;
+            }
+            li {
+                height: 20px;
+                list-style: none;
+                border: 1px solid gray;
+                margin-bottom: 11px;
+            }
+            button {
+                display: block;
+                width: 50px;
+                height: 30px;
+                border: none;
+                cursor: pointer;
+                background: #D4DBAB;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "box">
+            <div class = "ul-box">
+                <ul>
+                    <li> menu list 1  </li>
+                    <li> menu list 2  </li>
+                    <li> menu list 3  </li>
+                    <li> menu list 4  </li>
+                    <li> menu list 5  </li>
+                    <li> menu list 6  </li>
+                    <li> menu list 7  </li>
+                    <li> menu list 8  </li>
+                    <li> menu list 9  </li>
+                    <li> menu list 10 </li>
+                </ul>
+            </div>
+        </div>
+        <button>start</button>
+        <script>
+            var flat = true ,time = 0;
+
+            var start = function() {
+                $("button").text("stop");
+                scorll = setInterval(function(){
+                    $(".ul-box").animate({ marginTop : "-=33" }, 100);
+                    time++;
+                    if(time === 10)
+                    {
+                        time = 0;
+                        var clone_ul = $(".ul-box ul:first").clone();
+                        $(clone_ul).insertAfter(".ul-box ul:last")
+                    }
+                },100);
+                flat = false;
+            }
+
+            //stop animate
+            var stop = function() {
+                $("button").text("start");
+                clearInterval(scorll);
+                flat = true;
+            }
+
+            $("button").click(function(){
+                if(flat)
+                    start();
+                else
+                    stop();
+            });
+        </script>
+    </body>
+</html>

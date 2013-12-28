@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.login-wrap {
+    position: absolute;
+    border: 1px solid gray;
+    width: 360px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #ecf0f1;
+    box-shadow: 3px 3px 10px #333;
+    top: 25%;
+    left: 36%;
+}
+h2 {
+    text-align: center;
+    font-weight: 200;
+    margin-top: 10px;
+    color: #34495e;
+}
+form {
+    padding-top: 10px;
+}
+form input[type="text"],
+form input[type="password"]{
+  border: 1px solid #bbb;
+  border-radius: 5px;  
+  width: 70%;
+  margin-left: 3%;
+  height: 40px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  outline: 0;
+}
+button {
+    width: 40%;
+    height: 40px;
+    margin-left: 30%;
+    cursor: pointer;
+}
+button:hover {
+    box-shadow: 1px 1px 5px #555;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus{
+    border: 1px solid #3498db;
+}
+button {
+    border: none;
+    background: #e74c3c;
+    color: white;
+    font-size: 16px;
+    font-weight: 200px;
+    border-radius: 3px;
+    outline: 0;
+}
+.login-wrap:after {
+    content: '' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+    background: -moz-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+    height: 5px;
+    border-radius: 5px 5px 0 0;
+}
