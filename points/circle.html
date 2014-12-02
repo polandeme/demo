@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>circle</title>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			background: #828d8d;
+		}
+	</style>
+</head>
+<body>
+<div></div>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+			ctx = canvas.getContext('2d');
+
+			ctx.fillStyle = 'black';
+			ctx.strokeStyle = '#828d8d';
+			ctx.lineWidth = 3;
+			ctx.beginPath();
+			ctx.arc(30, 30, 3, 0, 2 * Math.PI);
+			ctx.arc(30, 30, 3, 0, 2 * Math.PI);
+			ctx.fill();
+			ctx.stroke();
+
+			ctx.fillStyle = '#aaa';
+			ctx.strokeStyle = '#eee';
+			ctx.lineWidth = 3;
+			ctx.beginPath();
+			ctx.arc(130, 130, 3, 0, 2 * Math.PI);
+			ctx.arc(130, 130, 3, 0, 2 * Math.PI);
+			ctx.fill();
+			ctx.stroke();
+
+			ctx.fillStyle = '#828d8d';
+			ctx.strokeStyle = '#a6a6a6';
+			ctx.lineWidth = 3;
+			ctx.beginPath();
+			ctx.arc(230, 130, 3, 0, 2 * Math.PI);
+			ctx.arc(230, 130, 3, 0, 2 * Math.PI);
+			ctx.fill();
+			ctx.stroke();
+	</script>
+</body>
+</html>
