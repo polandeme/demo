@@ -183,7 +183,7 @@
     ctx.fillText(data[cp_index % data.length], x + 5, y - 5);
   }
 
-draw();
+// draw();
 requestAnimationFrame(moveTo); 
 
 $.ajax({
@@ -199,4 +199,9 @@ $.ajax({
     console.log(error);
   }
 });
+
+$('body').css(
+  'background', "url(" + canvas.toDataURL() + ")"
+  );
+  
 })();
