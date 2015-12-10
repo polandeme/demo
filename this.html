@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 </head>
 <body>
+<h3>打开控制开，看结果和源码</h3>
 <ul class="list-group" id="group">
 	<li class="list-item">A</li>
 	<li class="list-item">B</li>
@@ -13,6 +14,8 @@
 </ul>
 <script type="text/javascript">
 	window.onload = function() {
+
+		// method 1
 		var list = document.querySelectorAll('.list-item');
 		for(var i = 0; i < list.length; i++) {
 			(function(i) {
@@ -23,6 +26,15 @@
 			})(i)
 		}
 
+		/**
+		  * method 2
+		  * 使用事件委派进行优化，上面的过程需要for循环进行循环绑定事件，效率和可扩展性都不高。
+		  */
+		var group = document.getElementById('group');
+		group.addEventListener('click', function(e) {
+			if(e.target && e.target.nodeName == 'LI')
+				console.log('this is click')
+		})
 
 	}
 
